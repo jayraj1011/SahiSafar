@@ -1,4 +1,4 @@
-const Booking = require('../models/Booking');
+// const Booking = require('../models/Booking');
 const transporter = require('../config/mailer');
 
 // ─── Create Booking ────────────────────────────────────────────────────────────
@@ -10,10 +10,13 @@ exports.createBooking = async (req, res) => {
     } = req.body;
 
     // Save to DB
-    const booking = await Booking.create({
-      fullName, phone, pickupLocation,
-      dropLocation, date, vehicleType, tripType, message,
-    });
+    // const booking = await Booking.create({
+    //   fullName, phone, pickupLocation,
+    //   dropLocation, date, vehicleType, tripType, message,
+    // });
+    const booking = {
+      bookingId: 'CY' + Date.now()
+    };
 
     // ── Send email to admin ──
     const adminMailOptions = {
