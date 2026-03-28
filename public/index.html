@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Sahi Safar — Premium Cab Booking Service | Safe & Comfortable Travel</title>
+  <meta name="description" content="Book your cab with Sahi Safar — trusted cab service with professional drivers, AC vehicles, and on-time pickup. Dzire, Ertiga, Innova available 24/7." />
+  <meta name="keywords" content="cab booking, taxi service, Sahi Safar, car rental, outstation cab, one-way cab, round trip cab, Dzire, Innova, Ertiga" />
+  <meta name="author" content="Sahi Safar" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://sahisafar.in/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sahi Safar — Premium Cab Booking" />
+  <meta property="og:description" content="Safe, comfortable, and affordable cab service. Book now!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sahisafar.in/" />
+  <meta property="og:image" content="https://sahisafar.in/images/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚖</text></svg>" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══ LOADING SCREEN ═══════════════════════════════════════════════════ -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-car">🚖</div>
+      <div class="loader-road"><div class="loader-line"></div></div>
+      <p class="loader-text">Sahi Safar</p>
+    </div>
+  </div>
+
+  <!-- ═══ NAVBAR ═══════════════════════════════════════════════════════════ -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-icon">🚖</span>
+        <span class="logo-text">Sahi<span class="logo-accent">Safar</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#packages" class="nav-link">Packages</a></li>
+        <li><a href="#why-us" class="nav-link">Why Us</a></li>
+        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="tel:+919876543210" class="btn-call">
+          <i class="fas fa-phone-alt"></i>
+          <span>+91 98765 43210</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO SECTION ══════════════════════════════════════════════════════ -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="hero-overlay"></div>
+      <div class="hero-grid"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <i class="fas fa-shield-alt"></i> Trusted by 10,000+ Customers
+        </div>
+        <h1 class="hero-title">
+          Your Journey,<br />
+          <span class="hero-accent">Our Commitment</span>
+        </h1>
+        <p class="hero-subtitle">
+          Safe, comfortable, and on-time cab service across the city and beyond.
+          Professional drivers · AC vehicles · 24/7 availability.
+        </p>
+        <div class="hero-stats">
+          <div class="stat"><strong>10K+</strong><span>Happy Riders</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>500+</strong><span>Cities Covered</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><strong>4.9★</strong><span>Avg Rating</span></div>
+        </div>
+      </div>
+
+      <!-- ── Booking Form ── -->
+      <div class="booking-card" id="booking">
+        <div class="booking-card-header">
+          <h2>Book Your Cab</h2>
+          <p>Quick & Easy Booking</p>
+        </div>
+
+        <form id="bookingForm" class="booking-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName"><i class="fas fa-user"></i> Full Name</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required />
+              <span class="form-error" id="fullNameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" maxlength="10" required />
+              <span class="form-error" id="phoneError"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="pickupLocation"><i class="fas fa-map-marker-alt"></i> Pickup Location</label>
+              <input type="text" id="pickupLocation" name="pickupLocation" placeholder="City / Area / Landmark" required />
+              <span class="form-error" id="pickupError"></span>
+            </div>
+            <div class="form-group">
+              <label for="dropLocation"><i class="fas fa-flag-checkered"></i> Drop Location</label>
+              <input type="text" id="dropLocation" name="dropLocation" placeholder="Destination city or area" required />
+              <span class="form-error" id="dropError"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date"><i class="fas fa-calendar-alt"></i> Travel Date</label>
+              <input type="date" id="date" name="date" required />
+              <span class="form-error" id="dateError"></span>
+            </div>
+            <div class="form-group">
+              <label for="vehicleType"><i class="fas fa-car"></i> Vehicle Type</label>
+              <select id="vehicleType" name="vehicleType" required>
+                <option value="">Select Vehicle</option>
+                <option value="Dzire">Dzire (4 Seater)</option>
+                <option value="Etios">Etios (4 Seater)</option>
+                <option value="Ertiga">Ertiga (6 Seater)</option>
+                <option value="Innova">Innova (7 Seater)</option>
+                <option value="Innova Crysta">Innova Crysta (7 Seater)</option>
+                <option value="Tempo Traveller">Tempo Traveller (12-17 Seater)</option>
+              </select>
+              <span class="form-error" id="vehicleError"></span>
+            </div>
+          </div>
+
+          <div class="form-group trip-type-group">
+            <label><i class="fas fa-route"></i> Trip Type</label>
+            <div class="trip-toggle">
+              <label class="trip-option">
+                <input type="radio" name="tripType" value="one-way" checked />
+                <span class="trip-label"><i class="fas fa-arrow-right"></i> One Way</span>
+              </label>
+              <label class="trip-option">
+                <input type="radio" name="tripType" value="round-trip" />
+                <span class="trip-label"><i class="fas fa-exchange-alt"></i> Round Trip</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message"><i class="fas fa-comment-alt"></i> Message (Optional)</label>
+            <textarea id="message" name="message" rows="2" placeholder="Any special requirements or instructions..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <span class="btn-text"><i class="fas fa-paper-plane"></i> Book My Cab</span>
+            <span class="btn-loader"><i class="fas fa-spinner fa-spin"></i> Booking...</span>
+          </button>
+        </form>
+
+        <!-- Success Message -->
+        <div class="booking-success" id="bookingSuccess">
+          <div class="success-icon">✅</div>
+          <h3>Booking Confirmed!</h3>
+          <p class="booking-id-label">Your Booking ID</p>
+          <p class="booking-id" id="bookingIdDisplay">—</p>
+          <p>Our team will call you within <strong>15 minutes</strong> to confirm the details.</p>
+          <button class="btn-new-booking" onclick="resetBookingForm()">
+            <i class="fas fa-plus"></i> Make Another Booking
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICES ══════════════════════════════════════════════════════════ -->
+  <section id="services" class="section services-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What We Offer</span>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Everything you need for a perfect journey</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" data-animate>
+          <div class="service-icon"><i class="fas fa-route"></i></div>
+          <h3>Outstation Trips</h3>
+          <p>Long-distance intercity travel with comfortable AC vehicles and experienced drivers who know every route.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check"></i> One-way & Round trips</li>
+            <li><i class="fas fa-check"></i> Hill station specials</li>
+            <li><i class="fas fa-check"></i> All-India coverage</li>
+          </ul>
+        </div>
+
+        <div class="service-card featured" data-animate>
+          <div class="service-badge">Most Popular</div>
+          <div class="service-icon"><i class="fas fa-city"></i></div>
+          <h3>Local City Rides</h3>
+          <p>Point-to-point city travel with prompt pickup, metered or package-based billing — no surprises.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check"></i> Airport transfers</li>
+            <li><i class="fas fa-check"></i> Railway station pickup</li>
+            <li><i class="fas fa-check"></i> Hospital & emergency</li>
+          </ul>
+        </div>
+
+        <div class="service-card" data-animate>
+          <div class="service-icon"><i class="fas fa-users"></i></div>
+          <h3>Group Travel</h3>
+          <p>Large vehicles for family trips, corporate outings, and group tours with ample luggage space.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check"></i> 7 to 17 seaters</li>
+            <li><i class="fas fa-check"></i> Corporate packages</li>
+            <li><i class="fas fa-check"></i> Wedding travel</li>
+          </ul>
+        </div>
+
+        <div class="service-card" data-animate>
+          <div class="service-icon"><i class="fas fa-plane"></i></div>
+          <h3>Airport Transfers</h3>
+          <p>Never miss a flight. Scheduled pickups with live flight tracking and meet-and-greet service.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check"></i> Flight tracking</li>
+            <li><i class="fas fa-check"></i> Meet & greet</li>
+            <li><i class="fas fa-check"></i> On-time guarantee</li>
+          </ul>
+        </div>
+
+        <div class="service-card" data-animate>
+          <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+          <h3>Corporate Travel</h3>
+          <p>Monthly packages for businesses. Employee pickup, client drops, and executive travel done right.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check"></i> Monthly billing</li>
+            <li><i class="fas fa-check"></i> Dedicated fleet</li>
+            <li><i class="fas fa-check"></i> Priority support</li>
+          </ul>
+        </div>
+
+        <div class="service-card" data-animate>
+          <div class="service-icon"><i class="fas fa-om"></i></div>
+          <h3>Pilgrimage Tours</h3>
+          <p>Specially curated spiritual journey packages to major temples and dham yatras across India.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check"></i> Char Dham Yatra</li>
+            <li><i class="fas fa-check"></i> Vaishno Devi</li>
+            <li><i class="fas fa-check"></i> Custom packages</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PACKAGES ══════════════════════════════════════════════════════════ -->
+  <section id="packages" class="section packages-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Special Deals</span>
+        <h2 class="section-title">Popular Tour Packages</h2>
+        <p class="section-subtitle">Handpicked routes loved by our customers</p>
+      </div>
+
+      <div class="packages-grid">
+        <div class="package-card" data-animate>
+          <div class="package-image" style="background: linear-gradient(135deg,#667eea,#764ba2)">
+            <span class="package-emoji">🏔️</span>
+          </div>
+          <div class="package-body">
+            <div class="package-tag">Hill Station</div>
+            <h3>Shimla & Manali</h3>
+            <p>7 nights · 8 days · Himachal Pradesh</p>
+            <div class="package-features">
+              <span><i class="fas fa-car"></i> Innova Crysta</span>
+              <span><i class="fas fa-users"></i> Up to 7</span>
+              <span><i class="fas fa-snowflake"></i> AC</span>
+            </div>
+            <div class="package-price">
+              <span class="price">₹18,999</span>
+              <span class="price-note">per vehicle</span>
+            </div>
+            <a href="#booking" class="btn-package">Book Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="package-card" data-animate>
+          <div class="package-image" style="background: linear-gradient(135deg,#f093fb,#f5576c)">
+            <span class="package-emoji">🕌</span>
+          </div>
+          <div class="package-body">
+            <div class="package-tag">Religious</div>
+            <h3>Char Dham Yatra</h3>
+            <p>11 nights · 12 days · Uttarakhand</p>
+            <div class="package-features">
+              <span><i class="fas fa-car"></i> Ertiga / Innova</span>
+              <span><i class="fas fa-users"></i> Up to 6</span>
+              <span><i class="fas fa-route"></i> 4 Dhams</span>
+            </div>
+            <div class="package-price">
+              <span class="price">₹24,999</span>
+              <span class="price-note">per vehicle</span>
+            </div>
+            <a href="#booking" class="btn-package">Book Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="package-card" data-animate>
+          <div class="package-image" style="background: linear-gradient(135deg,#4facfe,#00f2fe)">
+            <span class="package-emoji">🏖️</span>
+          </div>
+          <div class="package-body">
+            <div class="package-tag">Beach</div>
+            <h3>Goa Beach Tour</h3>
+            <p>4 nights · 5 days · Goa</p>
+            <div class="package-features">
+              <span><i class="fas fa-car"></i> Dzire / Ertiga</span>
+              <span><i class="fas fa-users"></i> Up to 6</span>
+              <span><i class="fas fa-umbrella-beach"></i> Sightseeing</span>
+            </div>
+            <div class="package-price">
+              <span class="price">₹12,500</span>
+              <span class="price-note">per vehicle</span>
+            </div>
+            <a href="#booking" class="btn-package">Book Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="package-card" data-animate>
+          <div class="package-image" style="background: linear-gradient(135deg,#43e97b,#38f9d7)">
+            <span class="package-emoji">🐯</span>
+          </div>
+          <div class="package-body">
+            <div class="package-tag">Wildlife</div>
+            <h3>Jim Corbett Safari</h3>
+            <p>2 nights · 3 days · Uttarakhand</p>
+            <div class="package-features">
+              <span><i class="fas fa-car"></i> Innova</span>
+              <span><i class="fas fa-users"></i> Up to 7</span>
+              <span><i class="fas fa-binoculars"></i> Safari incl.</span>
+            </div>
+            <div class="package-price">
+              <span class="price">₹8,999</span>
+              <span class="price-note">per vehicle</span>
+            </div>
+            <a href="#booking" class="btn-package">Book Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHY CHOOSE US ════════════════════════════════════════════════════ -->
+  <section id="why-us" class="section why-section">
+    <div class="why-inner">
+      <div class="why-content">
+        <span class="section-tag light">Why Sahi Safar?</span>
+        <h2 class="section-title light">We Go the Extra Mile</h2>
+        <p class="section-subtitle light">Thousands of families trust us every month for one simple reason — we never compromise on safety or comfort.</p>
+
+        <div class="why-features">
+          <div class="why-item" data-animate>
+            <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="why-text">
+              <h4>100% Safe & Verified</h4>
+              <p>All drivers are background-checked, licensed, and trained in safe driving practices.</p>
+            </div>
+          </div>
+          <div class="why-item" data-animate>
+            <div class="why-icon"><i class="fas fa-clock"></i></div>
+            <div class="why-text">
+              <h4>Always On Time</h4>
+              <p>Our drivers arrive 10 minutes early so you never stress about being late.</p>
+            </div>
+          </div>
+          <div class="why-item" data-animate>
+            <div class="why-icon"><i class="fas fa-headset"></i></div>
+            <div class="why-text">
+              <h4>24/7 Customer Support</h4>
+              <p>Dedicated support team available round the clock via call and WhatsApp.</p>
+            </div>
+          </div>
+          <div class="why-item" data-animate>
+            <div class="why-icon"><i class="fas fa-tags"></i></div>
+            <div class="why-text">
+              <h4>Transparent Pricing</h4>
+              <p>No hidden charges. What you see is what you pay — guaranteed.</p>
+            </div>
+          </div>
+          <div class="why-item" data-animate>
+            <div class="why-icon"><i class="fas fa-snowflake"></i></div>
+            <div class="why-text">
+              <h4>Clean AC Vehicles</h4>
+              <p>Regularly sanitized, well-maintained fleet for the most comfortable rides.</p>
+            </div>
+          </div>
+          <div class="why-item" data-animate>
+            <div class="why-icon"><i class="fas fa-map-pin"></i></div>
+            <div class="why-text">
+              <h4>Live Trip Tracking</h4>
+              <p>Share your ride with family. Real-time GPS tracking for peace of mind.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="why-visual">
+        <div class="why-card-stack">
+          <div class="why-big-stat">
+            <span class="big-number" data-count="10000">0</span>
+            <span class="big-label">Happy Customers</span>
+          </div>
+          <div class="why-badges">
+            <div class="why-badge"><i class="fas fa-star"></i> 4.9 / 5 Rating</div>
+            <div class="why-badge"><i class="fas fa-car"></i> 50+ Vehicles</div>
+            <div class="why-badge"><i class="fas fa-road"></i> 5 Lakh+ KMs</div>
+            <div class="why-badge"><i class="fas fa-award"></i> Award Winning</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TESTIMONIALS ══════════════════════════════════════════════════════ -->
+  <section id="testimonials" class="section testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Reviews</span>
+        <h2 class="section-title">What Our Riders Say</h2>
+        <p class="section-subtitle">Real experiences from real customers</p>
+      </div>
+
+      <div class="testimonials-slider" id="testimonialSlider">
+        <div class="testimonial-track" id="testimonialTrack">
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Used Sahi Safar for our Shimla trip. The Innova Crysta was spotless and our driver Ramesh ji was so helpful with the luggage and route planning. Will definitely book again!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AK</div>
+              <div class="author-info">
+                <strong>Amit Kumar</strong>
+                <span>Delhi → Shimla</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Booked a one-way cab at midnight for my early morning flight. Driver arrived on time and the car was super clean and comfortable. Highly recommend for airport transfers!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">PG</div>
+              <div class="author-info">
+                <strong>Priya Gupta</strong>
+                <span>Noida → IGI Airport</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Our entire family did the Char Dham Yatra with Sahi Safar. The package was very reasonable and our driver was experienced in mountain roads. A spiritual journey made perfect."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">RS</div>
+              <div class="author-info">
+                <strong>Rajesh Sharma</strong>
+                <span>Haridwar → Char Dham</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★☆</div>
+            <p class="testimonial-text">"Corporate account with Sahi Safar for 6 months. Never had a single issue with employee pickups. Invoicing is clean and support team responds in minutes."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">NM</div>
+              <div class="author-info">
+                <strong>Neha Mehta</strong>
+                <span>HR Manager, TechCorp</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Booked a Tempo Traveller for our 15-member office trip to Mussoorie. Everything was arranged perfectly — music system, snacks stop, hotel suggestions. Five stars!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">VT</div>
+              <div class="author-info">
+                <strong>Vivek Tiwari</strong>
+                <span>Group Trip, Mussoorie</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="slider-controls">
+        <button class="slider-btn" id="prevBtn" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+        <div class="slider-dots" id="sliderDots"></div>
+        <button class="slider-btn" id="nextBtn" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ VEHICLES ══════════════════════════════════════════════════════════ -->
+  <section class="section vehicles-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Fleet</span>
+        <h2 class="section-title">Choose Your Ride</h2>
+        <p class="section-subtitle">Well-maintained, clean, and comfortable vehicles for every need</p>
+      </div>
+      <div class="vehicles-grid">
+        <div class="vehicle-card" data-animate>
+          <div class="vehicle-icon">🚗</div>
+          <h4>Maruti Dzire</h4>
+          <p>4 Seater · AC · Sedan</p>
+          <div class="vehicle-badge">₹12/km</div>
+        </div>
+        <div class="vehicle-card" data-animate>
+          <div class="vehicle-icon">🚙</div>
+          <h4>Toyota Etios</h4>
+          <p>4 Seater · AC · Sedan</p>
+          <div class="vehicle-badge">₹12/km</div>
+        </div>
+        <div class="vehicle-card" data-animate>
+          <div class="vehicle-icon">🚐</div>
+          <h4>Maruti Ertiga</h4>
+          <p>6 Seater · AC · SUV</p>
+          <div class="vehicle-badge">₹15/km</div>
+        </div>
+        <div class="vehicle-card" data-animate>
+          <div class="vehicle-icon">🚌</div>
+          <h4>Toyota Innova</h4>
+          <p>7 Seater · AC · SUV</p>
+          <div class="vehicle-badge">₹18/km</div>
+        </div>
+        <div class="vehicle-card featured-vehicle" data-animate>
+          <div class="vehicle-icon">🏆</div>
+          <h4>Innova Crysta</h4>
+          <p>7 Seater · AC · Premium</p>
+          <div class="vehicle-badge">₹22/km</div>
+        </div>
+        <div class="vehicle-card" data-animate>
+          <div class="vehicle-icon">🚍</div>
+          <h4>Tempo Traveller</h4>
+          <p>12-17 Seater · AC · Van</p>
+          <div class="vehicle-badge">₹30/km</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══════════════════════════════════════════════════════════ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">We're here to help plan your perfect journey</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item" data-animate>
+            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h4>Call Us Anytime</h4>
+              <a href="tel:+919876543210">+91 98765 43210</a><br />
+              <a href="tel:+918765432109">+91 87654 32109</a>
+            </div>
+          </div>
+          <div class="contact-item" data-animate>
+            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+            <div>
+              <h4>WhatsApp Us</h4>
+              <a href="https://wa.me/919876543210" target="_blank">Chat on WhatsApp</a>
+            </div>
+          </div>
+          <div class="contact-item" data-animate>
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email Us</h4>
+              <a href="mailto:bookings@cityyatra.com">bookings@cityyatra.com</a>
+            </div>
+          </div>
+          <div class="contact-item" data-animate>
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Office Address</h4>
+              <p>123, Transport Nagar, New Delhi — 110001</p>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-map" data-animate>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9046786523704!2d77.20890087549757!3d28.633483775669856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b741d057%3A0xcdee88e47393c3f1!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Office Location">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ════════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">🚖 Sahi<span>Safar</span></div>
+        <p>Making every journey comfortable, safe, and memorable since 2018.</p>
+        <div class="footer-badges">
+          <span>🔒 Secure Booking</span>
+          <span>✅ Verified Drivers</span>
+          <span>🌟 Top Rated</span>
+        </div>
+      </div>
+      <div class="footer-links-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#why-us">Why Choose Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#booking">Outstation Cabs</a></li>
+          <li><a href="#booking">Airport Transfers</a></li>
+          <li><a href="#booking">Local Rentals</a></li>
+          <li><a href="#booking">Group Travel</a></li>
+          <li><a href="#booking">Corporate Travel</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+919876543210">📞 +91 98765 43210</a></li>
+          <li><a href="https://wa.me/919876543210">💬 WhatsApp</a></li>
+          <li><a href="mailto:bookings@cityyatra.com">✉️ bookings@cityyatra.com</a></li>
+          <li><a href="#">📍 New Delhi, India</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Sahi Safar. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+    </div>
+  </footer>
+
+  <!-- ═══ FLOATING BUTTONS ══════════════════════════════════════════════════ -->
+  <a href="https://wa.me/919876543210?text=Hi%20City%20Yatra!%20I%20want%20to%20book%20a%20cab." target="_blank" class="float-btn float-whatsapp" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="float-tooltip">Chat on WhatsApp</span>
+  </a>
+  <a href="tel:+919876543210" class="float-btn float-call" aria-label="Call Now">
+    <i class="fas fa-phone-alt"></i>
+    <span class="float-tooltip">Call Now</span>
+  </a>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
