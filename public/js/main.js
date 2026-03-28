@@ -61,10 +61,11 @@ hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
 });
 
-// Close nav when link clicked
+// Close nav when link clicked (also reset hamburger icon)
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', () => {
     navLinksEl.classList.remove('open');
+    hamburger.classList.remove('active');
   });
 });
 
